@@ -1,0 +1,28 @@
+package com.xia.springboot.entity;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
+/**
+ * @Author: Xia
+ * @Date: 2024/3/18  14:58
+ */
+@TableName("address")
+@Data
+public class Address {
+    // 如果 address 类没有 id 可以自动补充 id
+    @TableId(type = IdType.AUTO)
+    private Integer id;
+
+    private Integer userId;
+
+    private String name;
+
+    private String phone;
+
+    private String address;
+
+    private String addDetail;
+}
